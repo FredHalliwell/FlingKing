@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+spread = 90.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 100.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 62.07
+linear_accel_random = 0.33
+scale = 2.0
+color = Color( 0.415686, 0.286275, 0, 1 )
+
+[node name="dust_particle" type="Particles2D"]
+position = Vector2( -2, 15 )
+rotation = -1.5708
+emitting = false
+amount = 20
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.7
+local_coords = false
+process_material = SubResource( 1 )

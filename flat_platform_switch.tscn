@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://flat_platform_switch.gd" type="Script" id=1]
+[ext_resource path="res://platform2.png" type="Texture" id=2]
+[ext_resource path="res://clock ticking.wav" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.3164, 16.0023 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="flat_platform_switch" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 1.125, 0.4 )
+shape = SubResource( 1 )
+
+[node name="check_for_switch_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_switch" type="CollisionShape2D" parent="check_for_switch_area"]
+position = Vector2( 0, 30 )
+shape = SubResource( 2 )
+
+[node name="platform2" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+
+[node name="slow_tick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -25.0
+[connection signal="area_entered" from="check_for_switch_area" to="." method="_on_check_for_switch_area_area_entered"]

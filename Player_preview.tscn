@@ -1,0 +1,235 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+rough = true
+absorbent = true
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends RigidBody2D
+
+# Declare member variables here. Examples:
+
+#launch ball
+####################################################
+var mouse_position_1
+var mouse_position_2
+var shoot_angle
+var apply_impulse = true
+####################################################
+
+#dunno tbh
+var x_difference
+var y_difference
+
+
+var allow_velocity_increase = true
+
+var preview_timer_start 
+var preview_timer = 0
+
+var platform_latvelocity = 120 # the lateral velocity of the platform that the player is on
+
+
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	
+	
+	
+	global_position = $\"/root/singleton\".singleton_player_pos
+	
+	#add collision exception with player
+	add_collision_exception_with($\"/root/singleton\".singleton_player_object)
+	add_collision_exception_with(self)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+#make ball shoot if mouse_position2 != mouse_position1, instead of on release
+
+#Check for screen touch
+func _input(event):
+	pass
+
+func _process(delta):
+	
+	
+	
+	
+	
+	if preview_timer_start == true:
+		preview_timer +=1
+		
+		
+		if preview_timer == 2:
+			$\"/root/singleton\".singleton_trajectory1_position = position
+		if preview_timer == 4:
+			$\"/root/singleton\".singleton_trajectory2_position = position
+		if preview_timer == 6:
+			$\"/root/singleton\".singleton_trajectory3_position = position
+		if preview_timer == 8:
+			$\"/root/singleton\".singleton_trajectory4_position = position
+		if preview_timer == 10:
+			$\"/root/singleton\".singleton_trajectory5_position = position
+		if preview_timer == 12:
+			$\"/root/singleton\".singleton_trajectory6_position = position
+			preview_timer = 0
+			preview_timer_start = false
+			
+			#delete instance
+			queue_free()
+			
+		
+	
+	#launch preview ball with increased velocity
+	if linear_velocity != Vector2(0,0) and allow_velocity_increase == true:
+		#linear_velocity = linear_velocity * 4
+		#gravity_scale = gravity_scale * 16.8
+		
+		allow_velocity_increase = false
+		
+		preview_timer_start = true
+		
+	
+	
+	
+	$\"/root/singleton\".player_preview_position = position
+	
+	#LAUNCH BALL CODE
+	###################################################################################################
+	mouse_position_2 = get_global_mouse_position()
+	if mouse_position_2 != null and apply_impulse == true:
+		
+		
+			
+		mouse_position_1 = $\"/root/singleton\".player_mouse_position_1
+		
+		
+		#get angle to shoot player
+		shoot_angle = mouse_position_1 - mouse_position_2
+		$\"/root/singleton\".singleton_shoot_direction = shoot_angle
+		
+		
+		
+		#apply impulse to player
+		#TODO: only apply impulse if abs(shootangle.x or .y ) < 350
+		
+		#if shot power is below 350 on each angle, shoot shot as normal
+		if abs(shoot_angle.x) < 350 and abs(shoot_angle.y) < 350:
+			
+			#apply to preview based on what player is stood on
+			
+			#if player is on a non-moving platform, apply default impulse
+			if $\"/root/singleton\".singleton_player_colliding_with != null or $\"/root/singleton\".singleton_player_on_vertical_platform == true:
+				if $\"/root/singleton\".singleton_player_colliding_with != null and not \"moving\" in $\"/root/singleton\".singleton_player_colliding_with and not \"slidey\" in $\"/root/singleton\".singleton_player_colliding_with:
+					apply_impulse(shoot_angle*5, shoot_angle*5)
+					#if player is on left moving platform, apply velocity of moving platform to it + default
+				elif $\"/root/singleton\".singleton_player_colliding_with != null and \"left\" in $\"/root/singleton\".moving_platform_direction:
+					apply_impulse(shoot_angle*5, shoot_angle*5 + Vector2(-platform_latvelocity,0))
+					#if player is on right moving platform, apply velocity of moving platform to it + default
+				elif $\"/root/singleton\".singleton_player_colliding_with != null and \"right\" in $\"/root/singleton\".moving_platform_direction:
+					apply_impulse(shoot_angle*5, shoot_angle*5 + Vector2(platform_latvelocity,0))
+				
+				elif \"bottom\" in $\"/root/singleton\".singleton_vertical_platform_direction:
+					apply_impulse(shoot_angle*5, shoot_angle*5 + Vector2(0,25))
+					
+				elif \"top\" in $\"/root/singleton\".singleton_vertical_platform_direction:
+					apply_impulse(shoot_angle*5, shoot_angle*5 + Vector2(0,-75))
+					
+				#if player is on a sliding \"wedge\" platform
+				if $\"/root/singleton\".singleton_player_colliding_with != null:
+					if \"slidey\" in $\"/root/singleton\".singleton_player_colliding_with:
+						apply_impulse(shoot_angle*5, shoot_angle*5 + $\"/root/singleton\".singleton_player_velocity)
+					
+			
+					
+				
+				
+					
+				
+					
+				
+			
+		else:
+			#if shot power is beyond maximum, limit it to maximum and shoot
+			if shoot_angle.x > 349:
+				shoot_angle.x = 350
+			if shoot_angle.x < -349:
+				shoot_angle.x = -350
+			
+			if shoot_angle.y > 349:
+				shoot_angle.y = 350
+			if shoot_angle.y < -349:
+				shoot_angle.y = -350
+				
+				
+			#apply impulse depending on player_colliding_with 
+			if $\"/root/singleton\".singleton_player_colliding_with != null or $\"/root/singleton\".singleton_player_on_vertical_platform == true:
+				if $\"/root/singleton\".singleton_player_colliding_with != null and not \"moving\" in $\"/root/singleton\".singleton_player_colliding_with:
+					apply_impulse(shoot_angle*5, shoot_angle*5)
+					#if player is on left moving platform, apply velocity of moving platform to it + default
+				elif $\"/root/singleton\".singleton_player_colliding_with != null and \"left\" in $\"/root/singleton\".moving_platform_direction:
+					apply_impulse(shoot_angle*5 + Vector2(-120,0), shoot_angle*5 + Vector2(-120,0))
+					
+					#if player is on right moving platform, apply velocity of moving platform to it + default
+				elif $\"/root/singleton\".singleton_player_colliding_with != null and \"right\" in $\"/root/singleton\".moving_platform_direction:
+					apply_impulse(shoot_angle*5 + Vector2(120,0), shoot_angle*5 + Vector2(120,0))
+				
+				elif \"bottom\" in $\"/root/singleton\".singleton_vertical_platform_direction:
+					apply_impulse(shoot_angle*5 + Vector2(0,-120), shoot_angle*5 + Vector2(0,-120))
+					
+				elif \"top\" in $\"/root/singleton\".singleton_vertical_platform_direction:
+					apply_impulse(shoot_angle*5 + Vector2(0,120), shoot_angle*5 + Vector2(0,120))
+					
+			
+			
+			
+			
+			
+		#set mouse_position_1 to 0, or so player cannot shoot again with previous shot's aim when landing
+		mouse_position_1 = Vector2(0,0)
+		
+		#stop code running more than once, so impulse is only applied for one frame
+		apply_impulse = false
+	
+
+	####################################################################################################
+	#clear instance 
+
+"
+
+[sub_resource type="CircleShape2D" id=3]
+
+[sub_resource type="SphereMesh" id=4]
+
+[node name="player_preview_rigidbody" type="RigidBody2D"]
+visible = false
+z_index = 4096
+collision_layer = 2
+mode = 2
+physics_material_override = SubResource( 1 )
+gravity_scale = 20.0
+continuous_cd = 2
+contacts_reported = 5
+contact_monitor = true
+script = SubResource( 2 )
+
+[node name="player_CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="player_CollisionShape2D"]
+modulate = Color( 0.898039, 0.196078, 1, 0.290196 )
+scale = Vector2( 10, 10 )
+z_index = 4096
+mesh = SubResource( 4 )

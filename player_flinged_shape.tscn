@@ -1,0 +1,31 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://jump1.png" type="Texture" id=1]
+[ext_resource path="res://jump3.png" type="Texture" id=2]
+[ext_resource path="res://jump6.png" type="Texture" id=3]
+[ext_resource path="res://jump7.png" type="Texture" id=4]
+[ext_resource path="res://jump5.png" type="Texture" id=5]
+[ext_resource path="res://jump2.png" type="Texture" id=6]
+[ext_resource path="res://jump4.png" type="Texture" id=7]
+[ext_resource path="res://player_flinged_shape.gd" type="Script" id=8]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="player_flinged_shape" type="MeshInstance2D"]
+position = Vector2( 0.0468216, -14.2339 )
+mesh = SubResource( 1 )
+script = ExtResource( 8 )
+
+[node name="jump_animation" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -9 )
+frames = SubResource( 2 )
+frame = 4
+speed_scale = 2.0

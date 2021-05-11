@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="CheckButton" type="CheckButton"]
+margin_right = 76.0
+margin_bottom = 40.0
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}

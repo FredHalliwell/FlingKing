@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://RopeLink.tscn" type="PackedScene" id=1]
+[ext_resource path="res://lvl2_platform.png" type="Texture" id=2]
+[ext_resource path="res://vine_top.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Rope" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("..")
+node_b = NodePath("../RopeLink")
+bias = 0.9
+softness = 16.0
+
+[node name="RopeLink" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 20 )
+collision_layer = 0
+collision_mask = 0
+sleeping = true
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2( 0.0300083, 40.0658 )
+node_a = NodePath("../RopeLink")
+node_b = NodePath("../RopeLink2")
+bias = 0.9
+softness = 16.0
+
+[node name="RopeLink2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 60 )
+collision_layer = 0
+collision_mask = 0
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2( 0.0300083, 80 )
+node_a = NodePath("../RopeLink2")
+node_b = NodePath("../RopeLink3")
+bias = 0.9
+softness = 16.0
+
+[node name="RopeLink3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 100 )
+collision_layer = 0
+collision_mask = 0
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+position = Vector2( 0, 120 )
+node_a = NodePath("../RopeLink3")
+node_b = NodePath("../RopeLink4")
+bias = 0.9
+softness = 16.0
+
+[node name="RopeLink4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 141.457 )
+collision_layer = 0
+collision_mask = 2147483648
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="."]
+position = Vector2( 0, 161.5 )
+node_a = NodePath("../RopeLink4")
+node_b = NodePath("../RopeLink5")
+bias = 0.9
+softness = 16.0
+
+[node name="RopeLink5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 181.464 )
+collision_layer = 0
+collision_mask = 0
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="."]
+position = Vector2( 0, 201.38 )
+node_a = NodePath("../RopeLink5")
+node_b = NodePath("../lvl2_flat_platform_swinging_rigidbody")
+bias = 0.9
+softness = 16.0
+
+[node name="lvl2_flat_platform_swinging_rigidbody" type="RigidBody2D" parent="."]
+position = Vector2( 0, 82 )
+collision_layer = 2
+mode = 2
+mass = 1.02041
+gravity_scale = 2.0
+
+[node name="lvl2_platform" type="Sprite" parent="lvl2_flat_platform_swinging_rigidbody"]
+position = Vector2( 0, 154 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lvl2_flat_platform_swinging_rigidbody"]
+polygon = PoolVector2Array( 47.1169, 119.521, 36.9667, 161.574, 0.101257, 188.034, -37.0615, 152.952, -48.0505, 123.067, -42.6208, 119.491 )
+
+[node name="vine_top" type="Sprite" parent="."]
+position = Vector2( 0, -7 )
+texture = ExtResource( 3 )

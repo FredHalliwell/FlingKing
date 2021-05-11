@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mouse_position_tracker.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Map_node.tscn" type="PackedScene" id=4]
+[ext_resource path="res://player_flinged_shape.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Camera_player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Camera_player.gd" type="Script" id=8]
+[ext_resource path="res://TouchScreenButton.tscn" type="PackedScene" id=9]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="player_rigidbody" parent="." instance=ExtResource( 2 )]
+position = Vector2( 91.8116, 723.008 )
+
+[node name="mouse_position_tracker" parent="." instance=ExtResource( 3 )]
+
+[node name="Map_node" parent="." instance=ExtResource( 4 )]
+
+[node name="player_flinged_shape" parent="." instance=ExtResource( 5 )]
+position = Vector2( 11.6194, -321.161 )
+z_index = 9
+
+[node name="Camera_player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 252, 448 )
+current = true
+limit_bottom = 896
+smoothing_enabled = true
+smoothing_speed = 3.5
+script = ExtResource( 8 )
+
+[node name="TouchScreenButton" parent="Camera_player" instance=ExtResource( 9 )]
+position = Vector2( -377.801, -460.346 )

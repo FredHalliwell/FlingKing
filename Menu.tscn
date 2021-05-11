@@ -1,0 +1,105 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://crown.png" type="Texture" id=1]
+[ext_resource path="res://Enchanted Land.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://chandelier.tscn" type="PackedScene" id=3]
+[ext_resource path="res://bgtest.tscn" type="PackedScene" id=4]
+[ext_resource path="res://start_button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://audio_button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://share_button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://settings_button.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 300
+font_data = ExtResource( 2 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 172.778, 66.2059, 194.63, 50.3002, 201.914, 54.6111, 207.116, 61.449, 210.387, 69.9221, 210.238, 198.059, 213.954, 206.235, 220.644, 212.776, 199.833, 229.127, 193.738, 224.965, 186.305, 214.113, 183.332, 204.897, 183.184, 80.3277, 180.508, 73.4898 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 64.5958, 239.464, 78.8298, 234.595, 94.562, 220.735, 106.174, 204.628, 109.545, 186.274, 108.796, 158.556, 115.538, 161.178, 121.906, 166.422, 125.277, 170.167, 153.745, 154.81, 143.632, 148.442, 131.645, 143.572, 119.659, 141.7, 107.298, 141.7, 104.973, 129.755, 104.692, 106.183, 105.534, 92.9946, 108.059, 83.4536, 135.279, 85.6986, 154.08, 90.469, 169.514, 96.6426, 161.657, 80.3669, 151.555, 66.0555, 132.754, 56.7952, 107.779, 53.989, 85.6102, 52.5859, 59.7936, 50.9022, 42.676, 46.9736, 31.732, 42.2032, 20.788, 35.1878, 26.9615, 47.8155, 36.7831, 60.4432, 50.8139, 71.3872, 63.4416, 77.5607, 83.0846, 82.6118, 74.9468, 96.0813, 70.1763, 111.796, 68.212, 122.459, 69.0539, 147.153, 43.5179, 160.342, 71.2988, 158.659, 74.6662, 177.74, 77.753, 197.945, 78.5948, 219.833, 72.4213, 233.022 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+polygon = PoolVector2Array( 225.031, 83.4161, 233.365, 91.75, 240.706, 95.5201, 251.421, 95.9169, 259.16, 92.3453, 265.708, 85.7972, 271.065, 77.0665, 259.755, 76.6697, 251.421, 72.5028, 247.254, 66.7484, 236.738, 73.8917 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( 223.701, 117.624, 245.685, 101.864, 252.174, 106.499, 258.796, 115.108, 261.047, 122.524, 261.709, 198.54, 265.682, 206.486, 271.642, 212.843, 250.85, 229, 242.772, 224.232, 235.885, 215.359, 234.693, 208.605, 234.031, 130.867, 229.263, 122.656 )
+
+[sub_resource type="OccluderPolygon2D" id=6]
+polygon = PoolVector2Array( 276.413, 117.774, 297.602, 101.75, 305.018, 107.047, 310.713, 114.728, 313.494, 121.085, 338.392, 102.279, 340.775, 102.412, 350.84, 107.974, 358.389, 116.847, 361.567, 123.998, 361.7, 128.104, 362.892, 198.955, 365.938, 206.107, 373.089, 212.464, 351.502, 229.282, 343.689, 221.866, 337.862, 212.464, 336.008, 206.504, 336.008, 131.282, 329.519, 123.866, 326.208, 123.733, 314.024, 132.739, 313.891, 200.147, 323.691, 212.331, 302.237, 229.15, 293.232, 220.542, 287.405, 209.02, 286.743, 204.782, 285.816, 131.15, 281.313, 122.939 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( 377.375, 140.125, 383.125, 129.625, 392, 121.75, 408.125, 111, 430.125, 99.375, 441.5, 104.875, 449.875, 115.125, 453.5, 125, 453.875, 248.25, 444.125, 268.25, 431.875, 278.5, 419, 284.375, 406.375, 285.375, 392.25, 277.375, 381.25, 262.875, 383.25, 251.5, 390.75, 244.375, 402.375, 245.375, 397.125, 252.25, 397.375, 259.875, 403.375, 264, 411.75, 264.875, 418.25, 260.75, 424.25, 252.875, 426.625, 246.75, 426.625, 210.625, 400.875, 229.25, 389.875, 223.25, 382.125, 214.75, 378.375, 206, 378, 201.75 )
+
+[node name="Menu" type="Node2D"]
+
+[node name="text_fling" type="RichTextLabel" parent="."]
+margin_left = 21.0
+margin_top = -57.0
+margin_right = 522.0
+margin_bottom = 527.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Fling"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="text_fling"]
+position = Vector2( -21.3636, 28.9087 )
+occluder = SubResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="text_fling"]
+position = Vector2( -21.3636, 28.9087 )
+occluder = SubResource( 3 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="text_fling"]
+position = Vector2( -21.3636, 28.9087 )
+occluder = SubResource( 4 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="text_fling"]
+position = Vector2( -21.3636, 28.9087 )
+occluder = SubResource( 5 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="text_fling"]
+position = Vector2( -21.3636, 28.9087 )
+occluder = SubResource( 6 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="text_fling"]
+position = Vector2( -21.3636, 28.9087 )
+occluder = SubResource( 7 )
+
+[node name="text_king" type="RichTextLabel" parent="."]
+margin_left = 41.3636
+margin_top = 191.091
+margin_right = 542.364
+margin_bottom = 747.091
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 1, 0.768627, 0, 1 )
+text = "King"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crown" type="Sprite" parent="."]
+position = Vector2( 440.824, 308.744 )
+rotation = 0.380482
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="bgtest" parent="." instance=ExtResource( 4 )]
+z_index = -4096
+
+[node name="chandelier" parent="." instance=ExtResource( 3 )]
+position = Vector2( 250.191, 224.413 )
+
+[node name="start_button" parent="." instance=ExtResource( 5 )]
+position = Vector2( 74.274, 517.927 )
+
+[node name="audio_button" parent="." instance=ExtResource( 6 )]
+position = Vector2( 40, 800 )
+
+[node name="share_button" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 800 )
+
+[node name="settings_button" parent="." instance=ExtResource( 8 )]
+position = Vector2( 361, 800 )

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://button_play.png" type="Texture" id=1]
+
+[node name="button_play" type="Sprite"]
+position = Vector2( -5.03046, 8.93711 )
+texture = ExtResource( 1 )

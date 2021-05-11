@@ -1,0 +1,239 @@
+[gd_scene load_steps=14 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends StaticBody2D
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	rotation_degrees -=0.5
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="CubeMesh" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="CubeMesh" id=7]
+
+[sub_resource type="CubeMesh" id=8]
+
+[sub_resource type="CubeMesh" id=9]
+
+[sub_resource type="CubeMesh" id=10]
+
+[sub_resource type="RectangleShape2D" id=11]
+
+[sub_resource type="CubeMesh" id=12]
+
+[sub_resource type="RectangleShape2D" id=13]
+
+[node name="flat_platform_rotating_2" type="StaticBody2D"]
+collision_layer = 2
+script = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 15, 1 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+scale = Vector2( 1, 15 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D2"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 140 )
+scale = Vector2( 8, 1 )
+shape = SubResource( 6 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D3"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -140 )
+scale = Vector2( 8, 1 )
+shape = SubResource( 6 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D4"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2( -140, 0 )
+rotation = 1.5708
+scale = Vector2( 8, 1 )
+shape = SubResource( 6 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D5"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2( 140, 0 )
+rotation = 1.5708
+scale = Vector2( 8, 1 )
+shape = SubResource( 6 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D6"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 10 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2( -130, -10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D7"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2( 130, -10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D10"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2( -130, 10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D8"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2( 130, 10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D9"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2( 10, 130 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D11"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="."]
+position = Vector2( 10, 10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D15"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="."]
+position = Vector2( 10, -10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D16"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="."]
+position = Vector2( -10, -10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D17"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="."]
+position = Vector2( -10, 10 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D18"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
+position = Vector2( 10, -130 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D13"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+position = Vector2( -10, 130 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D12"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
+position = Vector2( -10, -130 )
+rotation = 0.785398
+shape = SubResource( 11 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D14"]
+scale = Vector2( 10, 10 )
+mesh = SubResource( 12 )
+
+[node name="Area2D_not_null_collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_not_null_collision"]
+scale = Vector2( 2, 13 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D_not_null_collision"]
+scale = Vector2( 13, 2 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D_not_null_collision"]
+position = Vector2( -140, 0 )
+rotation = 1.5708
+scale = Vector2( 8.5, 1.75 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D_not_null_collision"]
+position = Vector2( 140, 0 )
+rotation = 1.5708
+scale = Vector2( 8.5, 1.75 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D_not_null_collision"]
+position = Vector2( 0, 140 )
+scale = Vector2( 8.5, 1.75 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D_not_null_collision"]
+position = Vector2( 0, -140 )
+scale = Vector2( 8.5, 1.75 )
+shape = SubResource( 13 )

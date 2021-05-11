@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Roboto-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[node name="scores_text" type="Node2D"]
+z_index = 4096
+
+[node name="text_score" type="RichTextLabel" parent="."]
+margin_right = 301.0
+margin_bottom = 84.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Score: "
+
+[node name="text_highscore" type="RichTextLabel" parent="."]
+margin_left = 261.0
+margin_top = 1.0
+margin_right = 503.0
+margin_bottom = 108.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "High Score:"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0, 0, 0.509804 )
+position = Vector2( 234.107, 17.9622 )
+scale = Vector2( 300, 25 )
+z_index = 4095
+z_as_relative = false
+mesh = SubResource( 3 )

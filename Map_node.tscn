@@ -1,0 +1,808 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://lvl2_flat_platform_short.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rope.tscn" type="PackedScene" id=2]
+[ext_resource path="res://flat_platform_fading.tscn" type="PackedScene" id=3]
+[ext_resource path="res://flat_platform_slidey.tscn" type="PackedScene" id=4]
+[ext_resource path="res://switch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://flat_platform_switch.tscn" type="PackedScene" id=6]
+[ext_resource path="res://flat_platform_moving_vertical.tscn" type="PackedScene" id=7]
+[ext_resource path="res://bottom_colliding_with.tscn" type="PackedScene" id=8]
+[ext_resource path="res://top_vertical_platform_collision.tscn" type="PackedScene" id=9]
+[ext_resource path="res://bgtest.png" type="Texture" id=10]
+[ext_resource path="res://flat_platform.tscn" type="PackedScene" id=11]
+[ext_resource path="res://invisible_wall.tscn" type="PackedScene" id=12]
+[ext_resource path="res://flat_platform_short.tscn" type="PackedScene" id=13]
+[ext_resource path="res://flat_platform_short2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://left_moving_platform_area.tscn" type="PackedScene" id=15]
+[ext_resource path="res://right_moving_platform_area.tscn" type="PackedScene" id=16]
+[ext_resource path="res://flat_platform_moving.tscn" type="PackedScene" id=17]
+[ext_resource path="res://checkpoint_1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://platform_travel_path_long.tscn" type="PackedScene" id=19]
+[ext_resource path="res://window.tscn" type="PackedScene" id=20]
+[ext_resource path="res://torch.tscn" type="PackedScene" id=21]
+[ext_resource path="res://chandelier.tscn" type="PackedScene" id=22]
+[ext_resource path="res://platform_travel_path_longer.tscn" type="PackedScene" id=23]
+[ext_resource path="res://platform_travel_path_longer_longer.tscn" type="PackedScene" id=24]
+[ext_resource path="res://gradient.png" type="Texture" id=25]
+[ext_resource path="res://flat_platform_thicc_platform.tscn" type="PackedScene" id=26]
+[ext_resource path="res://bg2.png" type="Texture" id=27]
+[ext_resource path="res://skySmall.png" type="Texture" id=28]
+[ext_resource path="res://lvl2_flat_platform_fading.tscn" type="PackedScene" id=29]
+[ext_resource path="res://flat_platform_bottom.tscn" type="PackedScene" id=30]
+
+[node name="Map_node" type="Node2D"]
+
+[node name="lvl2_flat_platform_fading" parent="." instance=ExtResource( 29 )]
+position = Vector2( 116.334, -20965.4 )
+
+[node name="lvl2_flat_platform_fading2" parent="." instance=ExtResource( 29 )]
+position = Vector2( 334.369, -21212.7 )
+
+[node name="lvl2_flat_platform_fading3" parent="." instance=ExtResource( 29 )]
+position = Vector2( 116.58, -21731.7 )
+
+[node name="lvl2_flat_platform_fading4" parent="." instance=ExtResource( 29 )]
+position = Vector2( 334.369, -22030.1 )
+
+[node name="lvl2_flat_platform_fading5" parent="." instance=ExtResource( 29 )]
+position = Vector2( 115.166, -22283.3 )
+
+[node name="lvl2_flat_platform_fading6" parent="." instance=ExtResource( 29 )]
+position = Vector2( 337.197, -22519.5 )
+
+[node name="lvl2_flat_platform_fading9" parent="." instance=ExtResource( 29 )]
+position = Vector2( 120.356, -26662.5 )
+
+[node name="lvl2_flat_platform_fading10" parent="." instance=ExtResource( 29 )]
+position = Vector2( 338.145, -26960.9 )
+
+[node name="lvl2_flat_platform_fading11" parent="." instance=ExtResource( 29 )]
+position = Vector2( 118.941, -27214.1 )
+
+[node name="lvl2_flat_platform_fading12" parent="." instance=ExtResource( 29 )]
+position = Vector2( 340.973, -27450.2 )
+
+[node name="lvl2_flat_platform_fading13" parent="." instance=ExtResource( 29 )]
+position = Vector2( 124.846, -27634.6 )
+
+[node name="lvl2_flat_platform_fading14" parent="." instance=ExtResource( 29 )]
+position = Vector2( 342.635, -27933 )
+
+[node name="lvl2_flat_platform_fading15" parent="." instance=ExtResource( 29 )]
+position = Vector2( 123.431, -28186.1 )
+
+[node name="lvl2_flat_platform_fading16" parent="." instance=ExtResource( 29 )]
+position = Vector2( 345.463, -28422.3 )
+
+[node name="lvl2_flat_platform_fading17" parent="." instance=ExtResource( 29 )]
+position = Vector2( 91.6542, -29217.1 )
+
+[node name="lvl2_flat_platform_fading19" parent="." instance=ExtResource( 29 )]
+position = Vector2( 100.634, -29679.6 )
+
+[node name="lvl2_flat_platform_fading7" parent="." instance=ExtResource( 29 )]
+position = Vector2( 339.984, -23336.1 )
+
+[node name="flat_platform_fading4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 389.485, -14495.7 )
+
+[node name="flat_platform_fading5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 246.25, -14698.7 )
+
+[node name="flat_platform_fading6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 59.297, -14884.3 )
+
+[node name="flat_platform_fading7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 382.9, -15029.3 )
+
+[node name="flat_platform_fading2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 244.297, -14394 )
+
+[node name="flat_platform_fading3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 59.297, -5792.33 )
+
+[node name="flat_platform_fading15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 155.253, -5991.89 )
+
+[node name="flat_platform_fading16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 308.4, -6168.68 )
+
+[node name="flat_platform_fading17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 155.253, -6370.5 )
+
+[node name="flat_platform_fading18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 308.4, -6570.63 )
+
+[node name="flat_platform_fading19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 59.297, -6570.63 )
+
+[node name="flat_platform_fading12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 62.3641, -14495.7 )
+
+[node name="flat_platform_slidey5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 394.7, -7270.22 )
+scale = Vector2( 6.3, 10 )
+
+[node name="flat_platform_slidey7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400.537, -8540.11 )
+scale = Vector2( 6.3, 10 )
+
+[node name="flat_platform_slidey11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400.537, -9682.31 )
+scale = Vector2( 6.3, 10 )
+
+[node name="flat_platform_slidey12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400.537, -10680.1 )
+scale = Vector2( 6.3, 10 )
+
+[node name="flat_platform_slidey13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400.537, -11190.3 )
+scale = Vector2( 6.3, 10 )
+
+[node name="flat_platform_slidey14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 315.01, -12010 )
+scale = Vector2( -5, 5 )
+
+[node name="flat_platform_slidey17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 318.019, -12400 )
+scale = Vector2( -5, 5 )
+
+[node name="flat_platform_slidey15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 413.295, -12220.2 )
+
+[node name="flat_platform_slidey4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 98.3191, -6915.83 )
+scale = Vector2( -6.3, 10 )
+
+[node name="flat_platform_slidey8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 102.95, -8201 )
+scale = Vector2( -6.3, 10 )
+
+[node name="flat_platform_slidey10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 16.0074, -7920.36 )
+scale = Vector2( -1.6, 1.6 )
+
+[node name="flat_platform_slidey6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 102.95, -7579.71 )
+scale = Vector2( -6.3, 10 )
+
+[node name="flat_platform_slidey9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 101.475, -8849.33 )
+scale = Vector2( -6.3, 10 )
+
+[node name="switch" parent="." instance=ExtResource( 5 )]
+position = Vector2( 369.158, -12576.5 )
+
+[node name="flat_platform_switch" parent="." instance=ExtResource( 6 )]
+position = Vector2( 84, -12026.5 )
+scale = Vector2( 2, 1 )
+
+[node name="flat_platform_switch3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 83.0218, -12360 )
+scale = Vector2( 2, 1 )
+
+[node name="flat_platform_switch5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 84, -12750 )
+scale = Vector2( 2, 1 )
+
+[node name="flat_platform_switch2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 200, -12200 )
+scale = Vector2( 2, 1 )
+
+[node name="flat_platform_switch4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 200, -12570 )
+scale = Vector2( 2, 1 )
+
+[node name="flat_platform_moving_vertical" parent="." instance=ExtResource( 7 )]
+position = Vector2( 252, -4083.99 )
+scale = Vector2( 1, 1 )
+
+[node name="flat_platform_moving_vertical3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 300.024, -4388.28 )
+scale = Vector2( 1, 1 )
+
+[node name="flat_platform_moving_vertical5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 180.158, -4467.01 )
+scale = Vector2( 1, 1 )
+
+[node name="flat_platform_moving_vertical6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 420, -4647.7 )
+scale = Vector2( 1, 1 )
+
+[node name="bottom_colliding_with" parent="." instance=ExtResource( 8 )]
+position = Vector2( 252.297, -3894.93 )
+
+[node name="bottom_colliding_with3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 300, -4377 )
+
+[node name="bottom_colliding_with5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 180, -4286 )
+
+[node name="bottom_colliding_with6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 420, -4466 )
+
+[node name="top_vertical_platform_collision" parent="." instance=ExtResource( 9 )]
+position = Vector2( 252, -4088 )
+
+[node name="top_vertical_platform_collision3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 300.024, -4571 )
+
+[node name="top_vertical_platform_collision5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 180.158, -4480 )
+
+[node name="top_vertical_platform_collision6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 420, -4660 )
+
+[node name="flat_platform4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 31.608, -56 )
+z_index = 999
+
+[node name="flat_platform7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 126.019, -2856 )
+z_index = 999
+
+[node name="flat_platform9" parent="." instance=ExtResource( 11 )]
+position = Vector2( 35.0218, -4870 )
+z_index = 999
+
+[node name="flat_platform11" parent="." instance=ExtResource( 11 )]
+position = Vector2( 227.022, -5263.81 )
+z_index = 999
+
+[node name="flat_platform3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 315, -336 )
+rotation = -1.5708
+z_index = 999
+
+[node name="flat_platform6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 315, -560 )
+rotation = -1.5708
+z_index = 999
+
+[node name="flat_platform10" parent="." instance=ExtResource( 11 )]
+position = Vector2( 273.4, -5012.53 )
+rotation = -1.5708
+z_index = 999
+
+[node name="flat_platform15" parent="." instance=ExtResource( 11 )]
+position = Vector2( 252, -12010 )
+rotation = -1.5708
+z_index = 999
+
+[node name="flat_platform17" parent="." instance=ExtResource( 11 )]
+position = Vector2( 252, -12249.7 )
+rotation = -1.5708
+z_index = 999
+
+[node name="flat_platform18" parent="." instance=ExtResource( 11 )]
+position = Vector2( 252, -12489.3 )
+rotation = -1.5708
+z_index = 999
+
+[node name="flat_platform5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 189, -560 )
+rotation = -1.5708
+z_index = 999
+
+[node name="invisible_wall" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3.39891, -12.5964 )
+z_index = -4096
+
+[node name="invisible_wall2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3.399, -20012.6 )
+z_index = -4096
+
+[node name="flat_platform_short" parent="." instance=ExtResource( 13 )]
+position = Vector2( 189, 560 )
+
+[node name="flat_platform_short2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 43.8641, 336 )
+
+[node name="flat_platform_short3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 326.188, 336 )
+
+[node name="flat_platform_short9" parent="." instance=ExtResource( 13 )]
+position = Vector2( 189, -336 )
+
+[node name="flat_platform_short10" parent="." instance=ExtResource( 13 )]
+position = Vector2( 40.4503, -448 )
+
+[node name="flat_platform_short15" parent="." instance=ExtResource( 13 )]
+position = Vector2( 40.4503, -1344 )
+
+[node name="flat_platform_short16" parent="." instance=ExtResource( 13 )]
+position = Vector2( 327.964, -1568 )
+
+[node name="flat_platform_short18" parent="." instance=ExtResource( 13 )]
+position = Vector2( 327.964, -2128 )
+
+[node name="flat_platform_short19" parent="." instance=ExtResource( 13 )]
+position = Vector2( 40.4503, -2520 )
+
+[node name="flat_platform_short20" parent="." instance=ExtResource( 13 )]
+position = Vector2( 43.8641, -3807.82 )
+
+[node name="flat_platform_short21" parent="." instance=ExtResource( 13 )]
+position = Vector2( 43.8641, -5651.12 )
+
+[node name="flat_platform_short22" parent="." instance=ExtResource( 13 )]
+position = Vector2( 327.964, -6774.82 )
+
+[node name="flat_platform_short23" parent="." instance=ExtResource( 13 )]
+position = Vector2( 332.024, -7939.88 )
+
+[node name="flat_platform_short24" parent="." instance=ExtResource( 13 )]
+position = Vector2( 332.024, -9269.85 )
+
+[node name="flat_platform_short25" parent="." instance=ExtResource( 13 )]
+position = Vector2( 332.024, -10200 )
+
+[node name="flat_platform_short26" parent="." instance=ExtResource( 13 )]
+position = Vector2( 43.8641, -11510 )
+
+[node name="flat_platform_short27" parent="." instance=ExtResource( 13 )]
+position = Vector2( 332.024, -11801.1 )
+
+[node name="flat_platform_short40" parent="." instance=ExtResource( 13 )]
+position = Vector2( 189, -11801.1 )
+
+[node name="flat_platform_short28" parent="." instance=ExtResource( 13 )]
+position = Vector2( 414.715, -12729.2 )
+
+[node name="flat_platform_short39" parent="." instance=ExtResource( 13 )]
+position = Vector2( 273.4, -12729.2 )
+
+[node name="flat_platform_short31" parent="." instance=ExtResource( 13 )]
+position = Vector2( 331.403, -14070 )
+
+[node name="flat_platform_short41" parent="." instance=ExtResource( 13 )]
+position = Vector2( 43.8641, -15103.5 )
+
+[node name="flat_platform_short17" parent="." instance=ExtResource( 13 )]
+position = Vector2( 40.4503, -1793.12 )
+
+[node name="flat_platform_short_2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 294.432, -656 )
+
+[node name="flat_platform_short_7" parent="." instance=ExtResource( 14 )]
+position = Vector2( 64.4607, -817.986 )
+
+[node name="flat_platform_short_6" parent="." instance=ExtResource( 14 )]
+position = Vector2( 165.579, -656 )
+
+[node name="flat_platform_short_3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 432.186, -1008 )
+
+[node name="flat_platform_short_4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 252.01, -1176 )
+
+[node name="flat_platform_short_5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 64.4607, -1902.74 )
+
+[node name="flat_platform_short_9" parent="." instance=ExtResource( 14 )]
+position = Vector2( 432.186, -3194.99 )
+
+[node name="flat_platform_short_10" parent="." instance=ExtResource( 14 )]
+position = Vector2( 70, -4193.99 )
+
+[node name="left_moving_platform_area" parent="." instance=ExtResource( 15 )]
+position = Vector2( 63, -3024 )
+
+[node name="left_moving_platform_area2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 63, -3528 )
+
+[node name="left_moving_platform_area3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 37, -9520 )
+
+[node name="left_moving_platform_area4" parent="." instance=ExtResource( 15 )]
+position = Vector2( 37, -9900 )
+
+[node name="left_moving_platform_area5" parent="." instance=ExtResource( 15 )]
+position = Vector2( 37, -10435 )
+
+[node name="left_moving_platform_area6" parent="." instance=ExtResource( 15 )]
+position = Vector2( 37, -10939 )
+
+[node name="right_moving_platform_area" parent="." instance=ExtResource( 16 )]
+position = Vector2( 385, -3024 )
+
+[node name="right_moving_platform_area2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 385, -3528 )
+
+[node name="right_moving_platform_area3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 295, -9520 )
+
+[node name="right_moving_platform_area4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 295, -9900 )
+
+[node name="right_moving_platform_area5" parent="." instance=ExtResource( 16 )]
+position = Vector2( 295, -10435 )
+
+[node name="right_moving_platform_area6" parent="." instance=ExtResource( 16 )]
+position = Vector2( 295, -10940 )
+
+[node name="flat_platform_moving" parent="." instance=ExtResource( 17 )]
+position = Vector2( 134.364, -3024 )
+
+[node name="flat_platform_moving2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 130, -3528 )
+
+[node name="flat_platform_moving3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 140, -9520 )
+
+[node name="flat_platform_moving4" parent="." instance=ExtResource( 17 )]
+position = Vector2( 140, -9900 )
+
+[node name="flat_platform_moving5" parent="." instance=ExtResource( 17 )]
+position = Vector2( 140, -10435 )
+
+[node name="flat_platform_moving6" parent="." instance=ExtResource( 17 )]
+position = Vector2( 140, -10938.5 )
+
+[node name="flat_platform8" parent="." instance=ExtResource( 11 )]
+position = Vector2( 327.199, -800.315 )
+
+[node name="checkpoint_1" parent="." instance=ExtResource( 18 )]
+position = Vector2( 97.411, -1372.87 )
+
+[node name="checkpoint_2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 254.9, -2883.55 )
+
+[node name="checkpoint_3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 106.3, -3836.82 )
+
+[node name="checkpoint_4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 104.629, -5677.11 )
+
+[node name="checkpoint_5" parent="." instance=ExtResource( 18 )]
+position = Vector2( 392.103, -6803.73 )
+
+[node name="checkpoint_6" parent="." instance=ExtResource( 18 )]
+position = Vector2( 408.558, -7966.94 )
+
+[node name="checkpoint_7" parent="." instance=ExtResource( 18 )]
+position = Vector2( 405.873, -9299.04 )
+
+[node name="checkpoint_8" parent="." instance=ExtResource( 18 )]
+position = Vector2( 405.873, -10226.1 )
+
+[node name="checkpoint_9" parent="." instance=ExtResource( 18 )]
+position = Vector2( 108, -11537.9 )
+
+[node name="checkpoint_10" parent="." instance=ExtResource( 18 )]
+position = Vector2( 394.7, -12756.5 )
+
+[node name="checkpoint_11" parent="." instance=ExtResource( 18 )]
+position = Vector2( 396.116, -14098.1 )
+
+[node name="checkpoint_12" parent="." instance=ExtResource( 18 )]
+position = Vector2( 103.95, -15126.7 )
+z_index = 1
+
+[node name="checkpoint_13" parent="." instance=ExtResource( 18 )]
+position = Vector2( 134.325, -16173 )
+
+[node name="checkpoint_14" parent="." instance=ExtResource( 18 )]
+position = Vector2( 389.485, -17393.5 )
+
+[node name="checkpoint_15" parent="." instance=ExtResource( 18 )]
+position = Vector2( 381.939, -18455.8 )
+
+[node name="checkpoint_16" parent="." instance=ExtResource( 18 )]
+position = Vector2( 263.207, -19192.5 )
+
+[node name="checkpoint_17" parent="." instance=ExtResource( 18 )]
+position = Vector2( 277.607, -20756 )
+
+[node name="checkpoint_18" parent="." instance=ExtResource( 18 )]
+position = Vector2( 273.928, -21545.9 )
+
+[node name="checkpoint_19" parent="." instance=ExtResource( 18 )]
+position = Vector2( 276.172, -22813.6 )
+
+[node name="checkpoint_20" parent="." instance=ExtResource( 18 )]
+position = Vector2( 128.517, -24128.9 )
+
+[node name="checkpoint_21" parent="." instance=ExtResource( 18 )]
+position = Vector2( 353.917, -25053.5 )
+
+[node name="checkpoint_22" parent="." instance=ExtResource( 18 )]
+position = Vector2( 383.041, -26511.5 )
+
+[node name="checkpoint_23" parent="." instance=ExtResource( 18 )]
+position = Vector2( 135.812, -28660.9 )
+
+[node name="checkpoint_24" parent="." instance=ExtResource( 18 )]
+position = Vector2( 130.772, -30583.5 )
+
+[node name="bgtest" type="Sprite" parent="."]
+position = Vector2( 252, -7112.88 )
+z_index = -4096
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="torch" parent="." instance=ExtResource( 21 )]
+position = Vector2( 447.43, -6592.15 )
+frame = 3
+
+[node name="torch6" parent="." instance=ExtResource( 21 )]
+position = Vector2( 48.6622, -8570.5 )
+scale = Vector2( -2, 2 )
+frame = 3
+
+[node name="torch7" parent="." instance=ExtResource( 21 )]
+position = Vector2( 47.9855, -10861.6 )
+scale = Vector2( -2, 2 )
+
+[node name="torch8" parent="." instance=ExtResource( 21 )]
+position = Vector2( 48.6622, -12500 )
+scale = Vector2( -2, 2 )
+frame = 3
+
+[node name="torch2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 447.43, -1247.94 )
+frame = 3
+
+[node name="torch4" parent="." instance=ExtResource( 21 )]
+position = Vector2( 447.43, -2386.42 )
+
+[node name="torch5" parent="." instance=ExtResource( 21 )]
+position = Vector2( 447.43, -4393.52 )
+
+[node name="torch3" parent="." instance=ExtResource( 21 )]
+position = Vector2( 48.6622, -665.291 )
+scale = Vector2( -2, 2 )
+
+[node name="window" parent="." instance=ExtResource( 20 )]
+position = Vector2( 250.795, 336 )
+
+[node name="window2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 254.9, -1792 )
+
+[node name="window3" parent="." instance=ExtResource( 20 )]
+position = Vector2( 254.9, -3600.19 )
+
+[node name="window8" parent="." instance=ExtResource( 20 )]
+position = Vector2( 375.199, -5169.65 )
+
+[node name="window4" parent="." instance=ExtResource( 20 )]
+position = Vector2( 248, -7369.33 )
+
+[node name="window5" parent="." instance=ExtResource( 20 )]
+position = Vector2( 245.812, -9328.04 )
+
+[node name="window6" parent="." instance=ExtResource( 20 )]
+position = Vector2( 332.024, -11566.9 )
+
+[node name="window7" parent="." instance=ExtResource( 20 )]
+position = Vector2( 270.25, -14501.2 )
+
+[node name="chandelier" parent="." instance=ExtResource( 22 )]
+position = Vector2( 157.544, -21.0964 )
+frame = 3
+
+[node name="chandelier2" parent="." instance=ExtResource( 22 )]
+position = Vector2( 252.297, -2820.86 )
+frame = 3
+
+[node name="chandelier3" parent="." instance=ExtResource( 22 )]
+position = Vector2( 107.161, -5612.33 )
+frame = 3
+
+[node name="chandelier4" parent="." instance=ExtResource( 22 )]
+position = Vector2( 102.95, -8176.79 )
+frame = 3
+
+[node name="chandelier5" parent="." instance=ExtResource( 22 )]
+position = Vector2( 400.103, -10161.2 )
+frame = 1
+
+[node name="chandelier6" parent="." instance=ExtResource( 22 )]
+position = Vector2( 432.186, -13462.7 )
+frame = 1
+
+[node name="platform_travel_path_lonf" parent="." instance=ExtResource( 19 )]
+position = Vector2( 252.01, -4054.93 )
+
+[node name="platform_travel_path_lonf2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 180, -4447.01 )
+
+[node name="platform_travel_path_lonf3" parent="." instance=ExtResource( 19 )]
+position = Vector2( 300, -4538.16 )
+
+[node name="platform_travel_path_lonf4" parent="." instance=ExtResource( 19 )]
+position = Vector2( 420, -4627.01 )
+
+[node name="platform_travel_path_lonf5" parent="." instance=ExtResource( 23 )]
+position = Vector2( 262.103, -9520 )
+rotation = 1.5708
+
+[node name="platform_travel_path_lonf6" parent="." instance=ExtResource( 23 )]
+position = Vector2( 264.103, -9900 )
+rotation = 1.5708
+
+[node name="platform_travel_path_lonf7" parent="." instance=ExtResource( 23 )]
+position = Vector2( 264.103, -10435 )
+rotation = 1.5708
+
+[node name="platform_travel_path_lonf8" parent="." instance=ExtResource( 23 )]
+position = Vector2( 264.103, -10940 )
+rotation = 1.5708
+
+[node name="platform_travel_path_lonf9" parent="." instance=ExtResource( 24 )]
+position = Vector2( 352.013, -3024 )
+rotation = 1.5708
+
+[node name="platform_travel_path_lonf10" parent="." instance=ExtResource( 24 )]
+position = Vector2( 352.013, -3528 )
+rotation = 1.5708
+
+[node name="flat_platform_short_8" parent="." instance=ExtResource( 14 )]
+position = Vector2( 201.649, -13019.7 )
+
+[node name="flat_platform_short_11" parent="." instance=ExtResource( 14 )]
+position = Vector2( 64.4607, -13283.3 )
+
+[node name="flat_platform_short_12" parent="." instance=ExtResource( 14 )]
+position = Vector2( 432.186, -13481.4 )
+
+[node name="flat_platform_short_13" parent="." instance=ExtResource( 14 )]
+position = Vector2( 64.4607, -13634.2 )
+
+[node name="gradient" type="Sprite" parent="."]
+position = Vector2( 252, -14612.9 )
+z_index = -1
+z_as_relative = false
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="gradient2" type="Sprite" parent="."]
+position = Vector2( 252.01, -15612.9 )
+rotation = 3.14159
+z_as_relative = false
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg2" type="Sprite" parent="."]
+position = Vector2( 252.01, -23112.9 )
+z_index = -1
+texture = ExtResource( 27 )
+
+[node name="skySmall" type="Sprite" parent="."]
+position = Vector2( 248, -24112.2 )
+scale = Vector2( 1, 60 )
+z_index = -2
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lvl2_flat_platform_short" parent="." instance=ExtResource( 1 )]
+position = Vector2( 371.026, -15460.5 )
+
+[node name="lvl2_flat_platform_short2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 118.754, -15726.4 )
+
+[node name="lvl2_flat_platform_short3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 380.4, -15976.5 )
+
+[node name="lvl2_flat_platform_short4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 115.161, -16154.6 )
+
+[node name="lvl2_flat_platform_short5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 254.9, -16556.1 )
+
+[node name="lvl2_flat_platform_short6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 147.45, -16954 )
+
+[node name="lvl2_flat_platform_short8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 129.486, -20389.5 )
+
+[node name="lvl2_flat_platform_short13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 361.748, -24442.1 )
+
+[node name="lvl2_flat_platform_short14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 105.459, -24730.4 )
+
+[node name="lvl2_flat_platform_short16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 119.459, -28630.4 )
+
+[node name="lvl2_flat_platform_short17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 111.899, -30550.5 )
+
+[node name="lvl2_flat_platform_short15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 340.391, -25024.1 )
+
+[node name="lvl2_flat_platform_short12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116.032, -24099.6 )
+
+[node name="lvl2_flat_platform_short9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 259.653, -20724.4 )
+
+[node name="lvl2_flat_platform_short10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 258.258, -21516.4 )
+
+[node name="lvl2_flat_platform_short11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 255.08, -22785.6 )
+
+[node name="lvl2_flat_platform_short7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 360, -17364.7 )
+
+[node name="Rope" parent="." instance=ExtResource( 2 )]
+position = Vector2( 186.706, -17748.5 )
+
+[node name="Rope2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 361.322, -18311.6 )
+
+[node name="flat_platform_thicc_platform2" parent="." instance=ExtResource( 26 )]
+position = Vector2( 179.632, -17823.6 )
+
+[node name="flat_platform_thicc_platform3" parent="." instance=ExtResource( 26 )]
+position = Vector2( 356.029, -18388.4 )
+
+[node name="Rope3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 254.007, -19052.5 )
+
+[node name="flat_platform_thicc_platform4" parent="." instance=ExtResource( 26 )]
+position = Vector2( 254.007, -19128.6 )
+
+[node name="Rope4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 334.776, -19825.5 )
+
+[node name="flat_platform_thicc_platform5" parent="." instance=ExtResource( 26 )]
+position = Vector2( 334.643, -19901.7 )
+
+[node name="Rope5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 117.342, -23284.8 )
+
+[node name="flat_platform_thicc_platform6" parent="." instance=ExtResource( 26 )]
+position = Vector2( 117.209, -23360.9 )
+
+[node name="Rope6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 115.66, -23769.1 )
+
+[node name="Rope7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 134.662, -25583.6 )
+
+[node name="Rope11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 359.268, -29105.2 )
+
+[node name="Rope12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 364.931, -29582.8 )
+
+[node name="lvl2_flat_platform_fading18" parent="." instance=ExtResource( 29 )]
+position = Vector2( 89.7664, -30144 )
+
+[node name="Rope13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 357.38, -30032.1 )
+
+[node name="Rope14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 363.043, -30509.7 )
+
+[node name="Rope8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 374.391, -25910.2 )
+
+[node name="Rope9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 121.177, -26146.9 )
+
+[node name="flat_platform_thicc_platform7" parent="." instance=ExtResource( 26 )]
+position = Vector2( 115.527, -23845.3 )
+
+[node name="Rope10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 368.618, -26370.4 )
+
+[node name="flat_platform_thicc_platform8" parent="." instance=ExtResource( 26 )]
+position = Vector2( 368.486, -26446.6 )
+
+[node name="lvl2_flat_platform_fading8" parent="." instance=ExtResource( 29 )]
+position = Vector2( 343.924, -23801 )
+
+[node name="flat_platform_bottom" parent="." instance=ExtResource( 30 )]
+position = Vector2( 244.354, 753.025 )
